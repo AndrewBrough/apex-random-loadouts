@@ -1,8 +1,12 @@
 @import "./colours.scss";
 
-html, body {
+html,
+body {
   font-size: 16px;
-  padding: 1rem;
   margin: 0;
-  background: $background;
+  background: $white;
+}
+
+.App {
+  padding: 2rem;
 }

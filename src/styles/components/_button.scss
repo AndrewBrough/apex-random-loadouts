@@ -1,11 +1,24 @@
 @import "../colours.scss";
 
 button {
-  background: $white;
-  border: transparent;
-  color: $secondary;
+  background: $secondary;
+  border: none;
+  color: $white;
   font-weight: bold;
   font-size: 1.25rem;
-  border-radius: .25rem;
-  padding: 0.5rem;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+
+  &.outline {
+    background: transparent;
+    border: 3px solid $secondary;
+    color: $secondary;
+  }
+
+  &:focus,
+  &:hover {
+    outline: none;
+    border-color: lighten($secondary, 10%);
+  }
 }

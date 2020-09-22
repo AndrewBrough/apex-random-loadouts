@@ -14,7 +14,7 @@ const useRandomLoadout = () => {
   const generate = () => {
     const newLoadout: LoadoutType = {
       character: getRandomCharacterIndex(),
-      weapons: [[getRandomCollectionIndex()], [getRandomCollectionIndex()]]
+      weapons: [[getRandomCollectionIndex()], [getRandomCollectionIndex()]],
     };
     newLoadout.weapons[0][1] = getRandomCollectionWeaponIndex(
       newLoadout.weapons[0][0]

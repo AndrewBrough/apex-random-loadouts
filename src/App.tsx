@@ -18,8 +18,13 @@ export default function App() {
   return (
     <div className="App">
       <div className="title-row">
-        <h1>Apex</h1>
-        <button className="randomize-btn" onClick={onRandomize}>Just Fuck Me Up</button>
+        <div>
+          <h1 className="app-name">Apex</h1>
+          <h2 className="subtitle">Random Loadouts</h2>
+        </div>
+        <button className="randomize-btn outline" onClick={onRandomize}>
+          New Loadout
+        </button>
       </div>
       <Loadout loadout={loadout} />
     </div>

@@ -20,7 +20,7 @@ const ApexData: ApexDataType = {
     "Crypto",
     "Revenant",
     "Loba",
-    "Rampart"
+    "Rampart",
   ],
   collections: [
     {
@@ -30,16 +30,16 @@ const ApexData: ApexDataType = {
         "G7 Scout",
         "Hemlock Burst AR",
         "R-301 Carbine",
-        "HAVOK Rifle"
-      ]
+        "HAVOK Rifle",
+      ],
     },
     {
       name: "Sub Machine Guns",
-      weapons: ["Alternator SMG", "Prowler Burst PDW", "R-99", "Volt SMG"]
+      weapons: ["Alternator SMG", "Prowler Burst PDW", "R-99", "Volt SMG"],
     },
     {
       name: "Light Machine Guns",
-      weapons: ["Devotion", "Spitfire", "L-Star"]
+      weapons: ["Devotion", "Spitfire", "L-Star"],
     },
     {
       name: "Sniper Rifles",
@@ -48,18 +48,18 @@ const ApexData: ApexDataType = {
         "Triple Take",
         "Charge Rifle",
         "Sentinel",
-        "Kraber"
-      ]
+        "Kraber",
+      ],
     },
     {
       name: "Shotguns",
-      weapons: ["EVA-8 Auto", "Mastiff", "Mozambique", "Peacekeeper"]
+      weapons: ["EVA-8 Auto", "Mastiff", "Mozambique", "Peacekeeper"],
     },
     {
       name: "Pistols",
-      weapons: ["RE-45 Auto", "P2020", "Wingman"]
-    }
-  ]
+      weapons: ["RE-45 Auto", "P2020", "Wingman"],
+    },
+  ],
 };
 
 export { ApexData };
