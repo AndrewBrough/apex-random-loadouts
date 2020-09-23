@@ -3,6 +3,7 @@
 html,
 body {
   font-family: "Montserrat", sans-serif;
+  color: $primary;
 }
 
 h1,
@@ -16,6 +17,10 @@ label {
   font-weight: normal;
   margin: 0;
   color: $primary;
+  &.underline {
+    display: inline-block;
+    border-bottom: 3px solid $primary;
+  }
 }
 
 h1 {
@@ -53,4 +58,8 @@ h6 {
   font-family: "Montserrat", sans-serif;
   // font-weight: bold;
   color: $secondary;
+}
+
+li {
+  margin-bottom: 0.5rem;
 }

@@ -7,6 +7,7 @@ import { useRandomLoadout } from "./data/hooks/useRandomLoadout";
 
 import "./styles/index.scss";
 import "./App.scss";
+import { Rulebook } from "./components/Rulebook";
 
 export default function App() {
   const { createLoadout } = useRandomLoadout();
@@ -29,6 +30,7 @@ export default function App() {
         </button>
       </div>
       <Loadout loadout={loadout} setLoadout={setLoadout} />
+      <Rulebook />
     </div>
   );
 }
