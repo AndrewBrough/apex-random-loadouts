@@ -10,14 +10,6 @@ import "./App.scss";
 import { Rulebook } from "./components/Rulebook";
 
 export default function App() {
-  const { createLoadout } = useRandomLoadout();
-
-  const [loadout, setLoadout] = useState<LoadoutType>(createLoadout());
-
-  const onRerollClick = () => {
-    setLoadout(createLoadout());
-  };
-
   return (
     <div className="App">
       <div className="title-row">
@@ -25,11 +17,8 @@ export default function App() {
           <h1 className="app-name">Apex</h1>
           <h6 className="subtitle">Random Loadouts</h6>
         </div>
-        <button className="randomize-btn" onClick={onRerollClick}>
-          Reroll
-        </button>
       </div>
-      <Loadout loadout={loadout} setLoadout={setLoadout} />
+      <Loadout />
       <Rulebook />
     </div>
   );

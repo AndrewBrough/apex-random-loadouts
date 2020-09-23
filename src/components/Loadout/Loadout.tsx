@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 
 import { Loadout as LoadoutType } from "../../data/types/Loadout";
 import { ApexData } from "../../data/apex.data";
@@ -8,13 +8,18 @@ import { useRandomLoadout } from "../../data/hooks/useRandomLoadout";
 
 import "./Loadout.scss";
 
-interface Props {
-  loadout: LoadoutType;
-  setLoadout: (loadout: LoadoutType) => void;
-}
+const Loadout: FC = () => {
+  const {
+    createLoadout,
+    rerollCharacter,
+    rerollWeapon1,
+    rerollWeapon2,
+  } = useRandomLoadout();
+  const [loadout, setLoadout] = useState<LoadoutType>(createLoadout());
 
-const Loadout: FC<Props> = ({ loadout, setLoadout }) => {
-  const { rerollCharacter, rerollWeapon1, rerollWeapon2 } = useRandomLoadout();
+  const onRerollClick = () => {
+    setLoadout(createLoadout());
+  };
 
   if (!loadout) {
     return null;
@@ -44,6 +49,7 @@ const Loadout: FC<Props> = ({ loadout, setLoadout }) => {
         {getWeaponName(loadout.weapons[1][0], loadout.weapons[1][1])}
         <RerollButton onClick={() => setLoadout(rerollWeapon2(loadout))} />
       </h4>
+      <button onClick={onRerollClick}>Reroll</button>
     </>
   );
 };
