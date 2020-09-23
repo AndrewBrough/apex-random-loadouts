@@ -9,6 +9,11 @@
   border-bottom: 3px solid $primary;
   padding: 0 1rem 1rem;
   margin: 0 -1rem 1rem;
+  h1,
+  h5 {
+    margin-bottom: 0;
+  }
+
   > div {
     display: flex;
     flex-wrap: wrap;
