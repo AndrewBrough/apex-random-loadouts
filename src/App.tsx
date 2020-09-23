@@ -22,7 +22,7 @@ export default function App() {
       <div className="title-row">
         <div>
           <h1 className="app-name">Apex</h1>
-          <h5 className="subtitle">Random Loadouts</h5>
+          <h6 className="subtitle">Random Loadouts</h6>
         </div>
         <button className="randomize-btn" onClick={onRerollClick}>
           Reroll

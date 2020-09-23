@@ -26,12 +26,12 @@ const Loadout: FC<Props> = ({ loadout, setLoadout }) => {
 
   return (
     <>
-      <h1 className="character-name">
+      <h3 className="character-name">
         <div>
           {ApexData.character[loadout.character]}
           <RerollButton onClick={() => setLoadout(rerollCharacter(loadout))} />
         </div>
-      </h1>
+      </h3>
       <h6>featuring</h6>
       <h4>
         <small>the</small>
