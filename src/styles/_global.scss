@@ -4,9 +4,11 @@ html,
 body {
   font-size: 16px;
   margin: 0;
-  background: $white;
+  background: $background;
+  height: 100vh;
+  overflow: auto;
 }
 
 .App {
-  padding: 2rem;
+  padding: 1rem;
 }

@@ -1,8 +1,12 @@
-@import "./palette/primary.scss";
+// @import "./palette/bubblegum.scss";
+@import "./palette/soiree.scss";
 
-$primary: $pink;
-$secondary: $blue;
-$accent: $green;
-$text: $dark;
+$primary: $palettePrimary;
+$secondary: $paletteSecondary;
+$accent: $paletteAccent;
 
-$background: $secondary;
+$text: $paletteDark;
+$background: $paletteBackground;
+
+$white: $paletteWhite;
+$black: $paletteBlack;

@@ -1,24 +1,71 @@
 @import "../colours.scss";
 
+$hoverColour: lighten($primary, 10%);
+
 button {
-  background: $secondary;
+  background: $primary;
   border: none;
-  color: $white;
+  color: $text;
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1rem;
   border-radius: 0.25rem;
   padding: 0.75rem 1rem;
   cursor: pointer;
-
-  &.outline {
-    background: transparent;
-    border: 3px solid $secondary;
-    color: $secondary;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::after {
+    content: "";
+    width: 100%;
+    display: block;
+    border-bottom: 3px solid $black;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
   }
-
   &:focus,
   &:hover {
     outline: none;
-    border-color: lighten($secondary, 10%);
+    background: $hoverColour;
+  }
+
+  &.outline {
+    background: transparent;
+    border: 2px solid $primary;
+    color: $primary;
+    &:focus,
+    &:hover {
+      outline: none;
+      border-color: $hoverColour;
+    }
+  }
+
+  &.small {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    * {
+      font-size: 1rem;
+    }
+  }
+
+  &.unstyled,
+  &.icon {
+    background: none;
+    border: none;
+    outline: initial;
+    &::after {
+      content: none;
+    }
+  }
+
+  &.icon {
+    color: $primary;
+    &:focus,
+    &:hover {
+      outline: none;
+      color: $hoverColour;
+    }
   }
 }

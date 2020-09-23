@@ -11,7 +11,7 @@ const useRandomLoadout = () => {
       Math.random() * ApexData.collections[collectionIndex].weapons.length
     );
 
-  const generate = () => {
+  const createLoadout = () => {
     const newLoadout: LoadoutType = {
       character: getRandomCharacterIndex(),
       weapons: [[getRandomCollectionIndex()], [getRandomCollectionIndex()]],
@@ -32,7 +32,41 @@ const useRandomLoadout = () => {
     return newLoadout;
   };
 
-  return { generate };
+  const rerollCharacter = (loadout: LoadoutType) => {
+    const newLoadout: LoadoutType = {
+      ...loadout,
+      character: getRandomCharacterIndex(),
+      weapons: loadout.weapons,
+    };
+    return newLoadout;
+  };
+
+  const rerollWeapon1 = (loadout: LoadoutType) => {
+    const newLoadout: LoadoutType = {
+      ...loadout,
+    };
+    newLoadout.weapons[0][1] = getRandomCollectionWeaponIndex(
+      newLoadout.weapons[0][0]
+    );
+    return newLoadout;
+  };
+
+  const rerollWeapon2 = (loadout: LoadoutType) => {
+    const newLoadout: LoadoutType = {
+      ...loadout,
+    };
+    newLoadout.weapons[1][1] = getRandomCollectionWeaponIndex(
+      newLoadout.weapons[1][0]
+    );
+    return newLoadout;
+  };
+
+  return {
+    createLoadout,
+    rerollCharacter,
+    rerollWeapon1,
+    rerollWeapon2,
+  };
 };
 
 export { useRandomLoadout };
