@@ -3,7 +3,7 @@
 html,
 body {
   font-family: "Montserrat", sans-serif;
-  color: $primary;
+  color: $text;
 }
 
 h1,
@@ -16,7 +16,7 @@ label {
   font-family: "Monoton", cursive;
   font-weight: normal;
   margin: 0;
-  color: $primary;
+  color: $text;
   &.underline {
     display: inline-block;
     border-bottom: 3px solid $primary;
