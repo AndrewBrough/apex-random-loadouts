@@ -1,4 +1,7 @@
+import { WeaponDefinition } from "./WeaponDefinition";
+
 export type Loadout = {
   character: number;
-  weapons: number[][];
+  weapon1: WeaponDefinition;
+  weapon2: WeaponDefinition;
 };

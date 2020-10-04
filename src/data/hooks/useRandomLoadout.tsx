@@ -1,34 +1,37 @@
 import { Loadout as LoadoutType } from "../types/Loadout";
 import { ApexData } from "../apex.data";
+import { WeaponDefinition } from "../types/WeaponDefinition";
 
 const useRandomLoadout = () => {
   const getRandomCharacterIndex = () =>
     Math.floor(Math.random() * ApexData.character.length);
+
+  //gets one of weapon type (assault rifle, smg etc)
   const getRandomCollectionIndex = () =>
     Math.floor(Math.random() * ApexData.collections.length);
+
+  //gets one random weapon from weapon type
   const getRandomCollectionWeaponIndex = (collectionIndex: number) =>
     Math.floor(
       Math.random() * ApexData.collections[collectionIndex].weapons.length
     );
 
+  const getRandomWeapon = (): WeaponDefinition => {
+    const collectionIndex = getRandomCollectionIndex();
+    const weaponIndex = getRandomCollectionWeaponIndex(collectionIndex);
+    const weapon: WeaponDefinition = {
+      collectionIndex,
+      weaponIndex,
+    };
+    return weapon;
+  };
+
   const createLoadout = () => {
     const newLoadout: LoadoutType = {
       character: getRandomCharacterIndex(),
-      weapons: [[getRandomCollectionIndex()], [getRandomCollectionIndex()]],
+      weapon1: getRandomWeapon(),
+      weapon2: getRandomWeapon(),
     };
-    newLoadout.weapons[0][1] = getRandomCollectionWeaponIndex(
-      newLoadout.weapons[0][0]
-    );
-    const generateWeapon2 = () => {
-      newLoadout.weapons[1][1] = getRandomCollectionWeaponIndex(
-        newLoadout.weapons[1][0]
-      );
-      if (newLoadout.weapons[1][1] === newLoadout.weapons[0][1]) {
-        console.log("IT MATCH");
-        generateWeapon2();
-      }
-    };
-    generateWeapon2();
     return newLoadout;
   };
 
@@ -36,7 +39,6 @@ const useRandomLoadout = () => {
     const newLoadout: LoadoutType = {
       ...loadout,
       character: getRandomCharacterIndex(),
-      weapons: loadout.weapons,
     };
     return newLoadout;
   };
@@ -45,9 +47,7 @@ const useRandomLoadout = () => {
     const newLoadout: LoadoutType = {
       ...loadout,
     };
-    newLoadout.weapons[0][1] = getRandomCollectionWeaponIndex(
-      newLoadout.weapons[0][0]
-    );
+    newLoadout.weapon1 = getRandomWeapon();
     return newLoadout;
   };
 
@@ -55,9 +55,7 @@ const useRandomLoadout = () => {
     const newLoadout: LoadoutType = {
       ...loadout,
     };
-    newLoadout.weapons[1][1] = getRandomCollectionWeaponIndex(
-      newLoadout.weapons[1][0]
-    );
+    newLoadout.weapon2 = getRandomWeapon();
     return newLoadout;
   };
 
