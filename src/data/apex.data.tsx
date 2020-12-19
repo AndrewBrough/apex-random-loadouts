@@ -36,7 +36,7 @@ const ApexData: ApexDataType = {
     },
     {
       name: "Sub Machine Guns",
-      weapons: ["Alternator SMG", "Prowler Burst PDW" /*"R-99"*/, "Volt SMG"],
+      weapons: ["Alternator SMG", /*"Prowler Burst PDW",*/ "R-99", "Volt SMG"],
     },
     {
       name: "Light Machine Guns",
