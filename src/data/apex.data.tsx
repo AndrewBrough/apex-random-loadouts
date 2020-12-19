@@ -21,6 +21,7 @@ const ApexData: ApexDataType = {
     "Revenant",
     "Loba",
     "Rampart",
+    "Horizon",
   ],
   collections: [
     {
