@@ -22,6 +22,7 @@ const ApexData: ApexDataType = {
     "Loba",
     "Rampart",
     "Horizon",
+    "Fuse",
   ],
   collections: [
     {
@@ -32,6 +33,7 @@ const ApexData: ApexDataType = {
         "Hemlock Burst AR",
         "R-301 Carbine",
         "HAVOK Rifle",
+        "30-30 Repeater",
       ],
     },
     {
