@@ -34,8 +34,8 @@ const Loadout: FC<Props> = ({ loadout, setLoadout }) => {
       </h3>
       <h6>featuring</h6>
       <h4>
-        <small>the</small>
         <RerollButton onClick={() => setLoadout(rerollWeapon1(loadout))} />
+        <small>the</small>
         {getWeaponName(
           loadout.weapon1.collectionIndex,
           loadout.weapon1.weaponIndex
@@ -43,8 +43,8 @@ const Loadout: FC<Props> = ({ loadout, setLoadout }) => {
       </h4>
       <h6>and</h6>
       <h4>
-        <small>the</small>
         <RerollButton onClick={() => setLoadout(rerollWeapon2(loadout))} />
+        <small>the</small>
         {getWeaponName(
           loadout.weapon2?.collectionIndex,
           loadout.weapon2?.weaponIndex
