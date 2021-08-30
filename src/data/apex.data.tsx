@@ -23,32 +23,46 @@ const ApexData: ApexDataType = {
     "Rampart",
     "Horizon",
     "Fuse",
+    "Valkyrie",
+    "Seer",
   ],
   collections: [
     {
       name: "Assault Rifles",
       weapons: [
         "VK-47 Flatline",
-        "G7 Scout",
         "Hemlock Burst AR",
         "R-301 Carbine",
         "HAVOK Rifle",
-        "30-30 Repeater",
       ],
     },
     {
+      name: "Marksman Weapons",
+      weapons: ["G7 Scout", "30-30 Repeater", "Bocek Compound Bow"],
+    },
+    {
       name: "Sub Machine Guns",
-      weapons: ["Alternator SMG", /*"Prowler Burst PDW",*/ "R-99", "Volt SMG"],
+      weapons: [
+        // "Alternator SMG",
+        "Prowler Burst PDW",
+        "R-99",
+        "Volt SMG",
+      ],
     },
     {
       name: "Light Machine Guns",
-      weapons: ["Devotion", "Spitfire", "L-Star"],
+      weapons: [
+        "Devotion LMG",
+        //"M600 Spitfire",
+        "L-Star EMG",
+        "Rampage",
+      ],
     },
     {
       name: "Sniper Rifles",
       weapons: [
         "Longbow DMR",
-        "Triple Take",
+        // "Triple Take",
         "Charge Rifle",
         "Sentinel",
         // "Kraber",
@@ -56,7 +70,7 @@ const ApexData: ApexDataType = {
     },
     {
       name: "Shotguns",
-      weapons: ["EVA-8 Auto", "Mastiff", "Mozambique" /*"Peacekeeper"*/],
+      weapons: ["EVA-8 Auto", "Mastiff", "Mozambique" "Peacekeeper"],
     },
     {
       name: "Pistols",
