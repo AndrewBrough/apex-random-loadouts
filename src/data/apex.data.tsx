@@ -70,7 +70,7 @@ const ApexData: ApexDataType = {
     },
     {
       name: "Shotguns",
-      weapons: ["EVA-8 Auto", "Mastiff", "Mozambique" "Peacekeeper"],
+      weapons: ["EVA-8 Auto", "Mastiff", "Mozambique", "Peacekeeper"],
     },
     {
       name: "Pistols",
