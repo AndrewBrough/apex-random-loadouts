@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-
-import { Loadout as LoadoutType } from "./data/types/Loadout";
-
-import { Loadout } from "./components/Loadout";
-import { useRandomLoadout } from "./data/hooks/useRandomLoadout";
+import { useState } from "react";
 
 import "./styles/index.scss";
 import "./App.scss";
-import { Rulebook } from "./components/Rulebook";
+
+import { Loadout } from "@components/Loadout";
+import { Rulebook } from "@components/Rulebook";
+import { useRandomLoadout } from "@data/hooks/useRandomLoadout";
+import { LoadoutType } from "@data/types/Loadout";
 
 export default function App() {
   const { createLoadout } = useRandomLoadout();
@@ -25,9 +24,7 @@ export default function App() {
           <h1 className="app-name">Apex</h1>
           <h6 className="subtitle">Random Loadouts [S10 Edition]</h6>
         </div>
-        <button className="randomize-btn" onClick={onRerollClick}>
-          Reroll
-        </button>
+        <button onClick={onRerollClick}>Reroll</button>
       </div>
       <Loadout loadout={loadout} setLoadout={setLoadout} />
       <Rulebook />

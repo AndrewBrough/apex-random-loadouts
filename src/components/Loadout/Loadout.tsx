@@ -1,12 +1,11 @@
-import React, { FC } from "react";
-
-import { Loadout as LoadoutType } from "../../data/types/Loadout";
-import { ApexData } from "../../data/apex.data";
-
-import { RerollButton } from "../RerollButton";
-import { useRandomLoadout } from "../../data/hooks/useRandomLoadout";
+import { FC } from "react";
 
 import "./Loadout.scss";
+
+import { LoadoutType } from "@data/types/Loadout";
+import { useRandomLoadout } from "@data/hooks/useRandomLoadout";
+import { ApexData } from "@data/apex.data";
+import { RerollButton } from "@components/RerollButton";
 
 interface Props {
   loadout: LoadoutType;
