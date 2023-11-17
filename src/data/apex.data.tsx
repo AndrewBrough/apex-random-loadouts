@@ -25,6 +25,13 @@ const ApexData: ApexDataType = {
     "Fuse",
     "Valkyrie",
     "Seer",
+    "Ash",
+    "Mad Maggie",
+    "Newcastle",
+    "Vantage",
+    "Catalyst",
+    "Ballistic",
+    "Conduit",
   ],
   collections: [
     {
@@ -34,39 +41,35 @@ const ApexData: ApexDataType = {
         "Hemlock Burst AR",
         "R-301 Carbine",
         "HAVOK Rifle",
+        "Nemesis Burst AR",
       ],
     },
     {
       name: "Marksman Weapons",
-      weapons: ["G7 Scout", "30-30 Repeater", "Bocek Compound Bow"],
+      weapons: [
+        "G7 Scout",
+        "Triple Take",
+        "30-30 Repeater",
+        "Bocek Compound Bow",
+      ],
     },
     {
       name: "Sub Machine Guns",
       weapons: [
-        // "Alternator SMG",
+        "Alternator SMG",
         "Prowler Burst PDW",
         "R-99",
         "Volt SMG",
+        "C.A.R. SMG",
       ],
     },
     {
       name: "Light Machine Guns",
-      weapons: [
-        "Devotion LMG",
-        //"M600 Spitfire",
-        "L-Star EMG",
-        "Rampage",
-      ],
+      weapons: ["Devotion LMG", "M600 Spitfire", "L-Star EMG", "Rampage"],
     },
     {
       name: "Sniper Rifles",
-      weapons: [
-        "Longbow DMR",
-        // "Triple Take",
-        "Charge Rifle",
-        "Sentinel",
-        // "Kraber",
-      ],
+      weapons: ["Longbow DMR", "Charge Rifle", "Sentinel", "Kraber"],
     },
     {
       name: "Shotguns",
