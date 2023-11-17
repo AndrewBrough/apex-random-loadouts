@@ -1,6 +1,6 @@
-import { Loadout as LoadoutType } from "../types/Loadout";
-import { ApexData } from "../apex.data";
-import { WeaponDefinition } from "../types/WeaponDefinition";
+import { ApexData } from "@data/apex.data";
+import { LoadoutType } from "@data/types/Loadout";
+import { WeaponDefinition } from "@data/types/WeaponDefinition";
 
 const useRandomLoadout = () => {
   const getRandomCharacterIndex = () =>
